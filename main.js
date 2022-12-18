@@ -39,7 +39,7 @@ const opcionesPesosColombianos = {
     separadorMiles: ",",
     simbolo: "$ ", // Con un espacio, ya que la función no agrega espacios
     posicionSimbolo: "i", // i = izquierda, d = derecha
-}
+};
 // ,
 //     opcionesDolares = {
 //         numeroDeDecimales: 2,
@@ -48,13 +48,6 @@ const opcionesPesosColombianos = {
 //         simbolo: " USD", // Con un espacio, ya que la función no agrega espacios
 //         posicionSimbolo: "d", // i = izquierda, d = derecha
 //     };
-
-const numeros = [1.652, 12, 123, 1234, 12345.335, 123456, 1234567, 12345678, 123456789, 1234567890, 12345678901, 123456789012, 586.512];
-console.log("Probando con pesos...");
-numeros.forEach(numero => console.log(`Con ${numero} sale ${aMoneda(numero, opcionesPesosMexicanos)}`));
-console.log("Probando con dólares...");
-numeros.forEach(numero => console.log(`Con ${numero} sale ${aMoneda(numero, opcionesDolares)}`));
-
 
 //Hallar el cuatro por mil
 
