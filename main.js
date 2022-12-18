@@ -58,6 +58,6 @@ function calcularcuatroPorMil() {
     let valor = document.getElementById('valor');
     let value = parseFloat(valor.value);
 
-    const result = `El valor que debera pagar adiconal por utilizar $ ${aMoneda((value), opcionesPesosColombianos)} pesos es: \n $ ${cuatroPorMil(value)} pesos.`;
+    const result = `El valor que debera pagar adiconal por utilizar ${aMoneda((value), opcionesPesosColombianos)} pesos es: \n $ ${aMoneda((cuatroPorMil(value)),opcionesPesosColombianos)} pesos.`;
     document.getElementById('resultado').innerText = result;
 }
