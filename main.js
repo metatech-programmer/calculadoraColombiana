@@ -35,20 +35,11 @@ const aMoneda = (numero, opciones) => {
 // Probar
 const opcionesPesosColombianos = {
     numeroDeDecimales: 2,
-    separadorDecimal: ".",
-    separadorMiles: ",",
+    separadorDecimal: ",",
+    separadorMiles: ".",
     simbolo: "$ ", // Con un espacio, ya que la función no agrega espacios
     posicionSimbolo: "i", // i = izquierda, d = derecha
 };
-// ,
-//     opcionesDolares = {
-//         numeroDeDecimales: 2,
-//         separadorDecimal: ".",
-//         separadorMiles: ",",
-//         simbolo: " USD", // Con un espacio, ya que la función no agrega espacios
-//         posicionSimbolo: "d", // i = izquierda, d = derecha
-//     };
-
 //Hallar el cuatro por mil
 
 const cuatroPorMil = (valor) => (valor / 1000) * 4;
