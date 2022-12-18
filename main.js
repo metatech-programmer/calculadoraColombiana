@@ -13,10 +13,10 @@ const aMoneda = (numero, opciones) => {
     opciones.numeroDeDecimales = opciones.numeroDeDecimales >= 0 ? opciones.numeroDeDecimales : 2;
     opciones.posicionSimbolo = opciones.posicionSimbolo || "i";
     const CIFRAS_MILES = 3;
-    
+
     // Redondear y convertir a cadena
     let numeroComoCadena = numero.toFixed(opciones.numeroDeDecimales);
-    
+
     // Comenzar desde la izquierda del separador o desde el final de la cadena si no se proporciona
     let posicionDelSeparador = numeroComoCadena.indexOf(opciones.separadorDecimal);
     if (posicionDelSeparador === -1) posicionDelSeparador = numeroComoCadena.length;
@@ -42,29 +42,29 @@ const opcionesPesosColombianos = {
 }
 // ,
 //     opcionesDolares = {
-    //         numeroDeDecimales: 2,
-    //         separadorDecimal: ".",
-    //         separadorMiles: ",",
-    //         simbolo: " USD", // Con un espacio, ya que la función no agrega espacios
-    //         posicionSimbolo: "d", // i = izquierda, d = derecha
-    //     };
-    
-    const numeros = [1.652, 12, 123, 1234, 12345.335, 123456, 1234567, 12345678, 123456789, 1234567890, 12345678901, 123456789012, 586.512];
-    console.log("Probando con pesos...");
-    numeros.forEach(numero => console.log(`Con ${numero} sale ${aMoneda(numero, opcionesPesosMexicanos)}`));
-    console.log("Probando con dólares...");
-    numeros.forEach(numero => console.log(`Con ${numero} sale ${aMoneda(numero, opcionesDolares)}`));
+//         numeroDeDecimales: 2,
+//         separadorDecimal: ".",
+//         separadorMiles: ",",
+//         simbolo: " USD", // Con un espacio, ya que la función no agrega espacios
+//         posicionSimbolo: "d", // i = izquierda, d = derecha
+//     };
+
+const numeros = [1.652, 12, 123, 1234, 12345.335, 123456, 1234567, 12345678, 123456789, 1234567890, 12345678901, 123456789012, 586.512];
+console.log("Probando con pesos...");
+numeros.forEach(numero => console.log(`Con ${numero} sale ${aMoneda(numero, opcionesPesosMexicanos)}`));
+console.log("Probando con dólares...");
+numeros.forEach(numero => console.log(`Con ${numero} sale ${aMoneda(numero, opcionesDolares)}`));
 
 
-    //Hallar el cuatro por mil
-    
-    const cuatroPorMil = (valor) => (valor / 1000) * 4;
-    
-    
-    function calcularcuatroPorMil() {
-        let valor = document.getElementById('valor');
-        let value = parseFloat(valor.value);
-    
-        const result = `El valor que debera pagar adiconal por utilizar $ ${aMoneda(valor.value,opcionesPesosColombianos)} pesos es: \n $ ${aMoneda(cuatroPorMil(value),opcionesPesosColombianos)} pesos.`;
-        document.getElementById('resultado').innerText = result;
-    }
+//Hallar el cuatro por mil
+
+const cuatroPorMil = (valor) => (valor / 1000) * 4;
+
+
+function calcularcuatroPorMil() {
+    let valor = document.getElementById('valor');
+    let value = parseFloat(valor.value);
+
+    const result = `El valor que debera pagar adiconal por utilizar $ ${aMoneda((valor.value), opcionesPesosColombianos)} pesos es: \n $ ${cuatroPorMil(value)} pesos.`;
+    document.getElementById('resultado').innerText = result;
+}
