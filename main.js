@@ -35,7 +35,7 @@ const aMoneda = (numero, opciones) => {
 // Probar
 const opcionesPesosColombianos = {
     numeroDeDecimales: 2,
-    separadorDecimal: ",",
+    separadorDecimal: " ",
     separadorMiles: ".",
     simbolo: "$ ", // Con un espacio, ya que la función no agrega espacios
     posicionSimbolo: "i", // i = izquierda, d = derecha
