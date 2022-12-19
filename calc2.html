@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Calculadora del cuatro por mil</title>
+</head>
+<code><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4082434658127730"
+    crossorigin="anonymous"></script>
+</code>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">CALCULADORA COLOMBIANA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Impuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calc2.html">Productos</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="titulo">
+        <h1>CALCULADORA DE PRECIOS</h1>
+    </div>
+    <section class="calculadora">
+        <div class="proceso">
+
+            <h2>Ingresa los valores a continuación: </h2>
+            <form action="" class="formulario" method="get">
+                <div class="producto">
+                    <input type="number" name="cantidad" id="cantidad" placeholder="Digite la cantidad"
+                        onkeyup="calcularPrecio()" onclick="eliminar(id)" required>
+                    <h6>-- Cantidad --</h6>
+                </div>
+                <div class="producto">
+                    <input  type="number" name="precio" id="precio" placeholder="Precio del producto"
+                        onkeyup="calcularPrecio()" onclick="eliminar(id)" required>
+                    <h6>-- Producto --</h6>
+                </div>
+                <div class="producto">
+                    <input type="number" name="porcentaje" id="porcentaje" placeholder="Porcentaje IVA"
+                        onkeyup="calcularPrecio()" value="20" required>
+                    <h6>-- IVA --</h6>
+                </div>
+            </form>
+
+        </div>
+        <div class="respuesta">
+            <p class="resultado" id="resultado">Resultado</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="derechos-de-autor">Creado por Santiago Aguilar (2022) &#169;</div>
+    </footer>
+</body>
+
+</html>

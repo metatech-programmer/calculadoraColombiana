@@ -52,3 +52,23 @@ function calcularcuatroPorMil() {
     const result = `El valor que debera pagar adiconal por utilizar ${aMoneda((value), opcionesPesosColombianos)} pesos es: \n ${aMoneda((cuatroPorMil(value)),opcionesPesosColombianos)} pesos.`;
     document.getElementById('resultado').innerText = result;
 }
+
+
+const calcPrecioFinal = (precio, porcentaje, cantidad) => (precio+(precio*(porcentaje/100)))/cantidad;
+
+
+function calcularPrecio() {
+    let precio = document.getElementById('precio');
+    let price = parseFloat(precio.value);
+    let porcentaje = document.getElementById('porcentaje');
+    let porcent = parseFloat(porcentaje.value);
+    let cantidad = document.getElementById('cantidad');
+    let cant = parseFloat(cantidad.value);
+
+    const result = `El valor final de su producto es: \n ${aMoneda((calcPrecioFinal(price,porcent,cant)),opcionesPesosColombianos)} pesos.`;
+    document.getElementById('resultado').innerText = result;
+}
+function eliminar(id){
+    document.getElementById(id).value = '';
+
+}
