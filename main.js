@@ -48,13 +48,16 @@ const cuatroPorMil = (valor) => (valor / 1000) * 4;
 function calcularcuatroPorMil() {
     let valor = document.getElementById('valor');
     let value = parseFloat(valor.value);
+    let valorTotal = value + (cuatroPorMil(value));
 
-    const result = `El valor que debera pagar adiconal por utilizar ${aMoneda((value), opcionesPesosColombianos)} pesos es: \n ${aMoneda((cuatroPorMil(value)),opcionesPesosColombianos)} pesos.`;
+    const result = `El valor que debera pagar adiconal por utilizar ${aMoneda((value), opcionesPesosColombianos)} pesos es: \n ${aMoneda((cuatroPorMil(value)), opcionesPesosColombianos)} pesos.`;
+    const total = `Total  ${aMoneda((value), opcionesPesosColombianos)} + ${aMoneda((cuatroPorMil(value)), opcionesPesosColombianos)} : \n ${aMoneda(valorTotal, opcionesPesosColombianos)} pesos.`;
+    document.getElementById('total').innerText = total;
     document.getElementById('resultado').innerText = result;
 }
 
 
-const calcPrecioFinal = (precio, porcentaje, cantidad) => (precio+(precio*(porcentaje/100)))/cantidad;
+const calcPrecioFinal = (precio, porcentaje, cantidad) => (precio + (precio * (porcentaje / 100))) / cantidad;
 
 
 function calcularPrecio() {
@@ -65,10 +68,11 @@ function calcularPrecio() {
     let cantidad = document.getElementById('cantidad');
     let cant = parseFloat(cantidad.value);
 
-    const result = `El valor final de su producto es: \n ${aMoneda((calcPrecioFinal(price,porcent,cant)),opcionesPesosColombianos)} pesos.`;
+    const result = `El valor final de su producto es: \n ${aMoneda((calcPrecioFinal(price, porcent, cant)), opcionesPesosColombianos)} pesos.`;
+
     document.getElementById('resultado').innerText = result;
 }
-function eliminar(id){
+function eliminar(id) {
     document.getElementById(id).value = '';
 
 }
