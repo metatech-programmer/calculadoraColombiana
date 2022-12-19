@@ -98,7 +98,7 @@ h2 {
 
 
 .respuesta {
-    height: 80%;
+    height: 50%;
     width: 70%;
     border: 3px double #ffb700;
     background-color: whitesmoke;
@@ -111,7 +111,7 @@ h2 {
 
 }
 
-.respuesta .total{
+.respuesta .total {
     color: #ffb700;
 }
 
@@ -141,6 +141,7 @@ h2 {
 @media (max-width:700px) {
     .respuesta {
         width: 90%;
+        height: 80%;
     }
 
     .formulario {
