@@ -9,6 +9,7 @@
 
 }
 
+
 a {
     color: whitesmoke;
     font-weight: bold;
@@ -51,7 +52,8 @@ li {
     margin: 0 20px;
     text-align: center;
 }
-.producto h6{
+
+.producto h6 {
     position: relative;
     bottom: 30px;
 }
